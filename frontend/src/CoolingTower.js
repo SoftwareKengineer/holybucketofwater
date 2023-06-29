@@ -19,15 +19,15 @@ const CoolingTowerBrand = () => {
     }
 
     await fetch('https://holybucketofwater-mm4b.vercel.app/coolingtowers', {
-       method: 'POST',
-       body: JSON.stringify(body),
-       headers: {
-          'Content-Type': 'application/json; charset=UTF-8',
-          "Origin":"https://holybucketofwater.vercel.app/"
-       },
-    })
-       .then((response) => response.json())
-       .then((data) => {
+      method: 'POST',
+      mode:"cors",
+      body: JSON.stringify(body),
+      headers: {
+          'Content-Type': 'application/json; charset=UTF-8'
+        }
+      })
+      .then((response) => response.json())
+      .then((data) => {
         setName('');
         setSizeOfUnit('');
         setAmountOfWater('');
@@ -35,11 +35,10 @@ const CoolingTowerBrand = () => {
         setWaterCycles('');
         setCoolingTowerUnitId('');
       })
-       .catch((err) => {
+      .catch((err) => {
           console.log(err.message);
-       });
- };
- 
+      });
+};
   function handleSubmit(e) {
     e.preventDefault();
     createCoolingTower(name, sizeOfUnit, amountOfWater, evaporationRate, waterCycles, coolingTowerUnitId);
@@ -74,13 +73,11 @@ const CoolingTowerBrand = () => {
       waterCycles: e.target.value
     });
   }
-
   function handleCoolingTowerUnitIdChange(e) {
     setCoolingTowerUnitId({
       coolingTowerUnitId: e.target.value
     });
   }
-
   return (
     <>
       <div className="container p-5">
@@ -90,7 +87,6 @@ const CoolingTowerBrand = () => {
               <div className="card-header">Cooling Tower</div>
               <div className="card-body">
                 <form onSubmit={handleSubmit}>
-
                   <div className="mb-3">
                     <label className="form-label">
                       Name
@@ -102,7 +98,6 @@ const CoolingTowerBrand = () => {
                       onChange={handleNameChange}
                     />
                   </div>
-
                   <div className="mb-3">
                     <label className="form-label">
                       Size Of Unit
@@ -114,7 +109,6 @@ const CoolingTowerBrand = () => {
                       onChange={handleSizeOfUnitChange}
                     />
                   </div>
-
                   <div className="mb-3">
                     <label className="form-label">
                     Amount Of Water
@@ -126,7 +120,6 @@ const CoolingTowerBrand = () => {
                       onChange={handleAmountOfWaterChange}
                     />
                   </div>
-
                   <div className="mb-3">
                     <label className="form-label">
                     Number of Holes
@@ -138,7 +131,6 @@ const CoolingTowerBrand = () => {
                       onChange={handleEvaporationRateChange}
                     />
                   </div>
-
                   <div className="mb-3">
                     <label className="form-label">
                     Water Cycles
@@ -150,7 +142,6 @@ const CoolingTowerBrand = () => {
                       onChange={handleWaterCyclesChange}
                     />
                   </div>
-
                   <div className="mb-3">
                     <label className="form-label">
                     Cooling Tower Unit Id
@@ -162,7 +153,6 @@ const CoolingTowerBrand = () => {
                       onChange={handleCoolingTowerUnitIdChange}
                     />
                   </div>
-
                   <button type="submit" className="btn btn-primary">
                     Submit
                   </button>
