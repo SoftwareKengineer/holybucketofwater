@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "fvdcorky",
+    "password": "l5wSX_AWtD020fKW15hxJpQ0YLi7hly_",
+    "database": "fvdcorky",
+    "host": "lallah.db.elephantsql.com",
+    "dialect": "postgres"
+  }
+}
