@@ -18,7 +18,7 @@ const CoolingTowerBrand = () => {
       cooling_tower_unit_id: Number(coolingTowerUnitId.coolingTowerUnitId)
     }
 
-    await fetch('http://localhost:3001/coolingtowers', {
+    await fetch('https://holybucketofwater-mm4b.vercel.app/coolingtowers', {
        method: 'POST',
        body: JSON.stringify(body),
        headers: {

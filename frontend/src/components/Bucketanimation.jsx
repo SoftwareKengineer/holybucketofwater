@@ -8,7 +8,7 @@ export const Bucketanimation = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/coolingtowers", {
+        const response = await fetch("https://holybucketofwater-mm4b.vercel.app/coolingtowers", {
           method: "GET",
           headers: {
             "Content-type": "application/json; charset=UTF-8",
