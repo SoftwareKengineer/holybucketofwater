@@ -4,12 +4,12 @@ var router = express.Router();
 const controller = require("./../controllers/coolingtowerbrands");
 
 router
-    .route("/")
+    .route("https://holybucketofwater-mm4b.vercel.app/")
     .get(controller.get)
     .post(controller.add);
 
 router
-    .route("/:id")
+    .route("https://holybucketofwater-mm4b.vercel.app/:id")
     .put(controller.update)
     .get(controller.getOne)
     .delete(controller.deleteOne);
