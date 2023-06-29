@@ -22,7 +22,8 @@ const CoolingTowerBrand = () => {
        method: 'POST',
        body: JSON.stringify(body),
        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
+          'Content-Type': 'application/json; charset=UTF-8',
+          "Origin":"https://holybucketofwater.vercel.app/"
        },
     })
        .then((response) => response.json())
