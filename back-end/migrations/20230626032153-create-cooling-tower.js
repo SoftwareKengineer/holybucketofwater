@@ -28,9 +28,6 @@ module.exports = {
       },
       cooling_tower_unit_id: {
         type: Sequelize.INTEGER,
-        references: {
-          model: 'CoolingTowerUnits',
-          key: 'id'}
       },
       createdAt: {
         allowNull: false,

@@ -4,7 +4,7 @@ const CoolingTowerBrand = () => {
   const [name, setName] = useState('');
 
   const createCoolingTowerBrand = async (name) => {
-    await fetch('https://holybucketofwater-mm4b.vercel.app/coolingtowerbrands', {
+    await fetch('https://localhost:3001/coolingtowerbrands', {
        method: 'POST',
        body: JSON.stringify(name),
        headers: {

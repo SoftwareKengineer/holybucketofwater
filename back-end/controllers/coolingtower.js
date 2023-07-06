@@ -1,3 +1,4 @@
+const { CommandCompleteMessage } = require("pg-protocol/dist/messages");
 const db = require ("./../models")
 
 
@@ -11,7 +12,7 @@ async function get(req, res) {
 }
 
 async function add(req, res) {
-
+console.log(req.body)
     let name = req.body.name;
     let size_of_unit = req.body.size_of_unit;
     let amount_of_water = req.body.amount_of_water;
@@ -30,6 +31,7 @@ async function add(req, res) {
         })
         return res.json({ "message": "CoolingTower was successfully create !" });
     } catch (error) {
+        console.log(error)
         return res.status(500).json(error);
     }
 }

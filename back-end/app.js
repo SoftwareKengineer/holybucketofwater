@@ -41,6 +41,10 @@ app.use(bodyParser.json());
 app.use('/coolingtowerbrands', coolingtowerbrand);
 app.use('/coolingtowers', coolingtower);
 
+app.get("/", (req, res) => {
+res.send ("maybe you mean /coolingtowers")
+})
+
 app.listen(port, () => {
   console.log(`App listening on port ${port}`);
 });
